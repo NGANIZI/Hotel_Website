@@ -1,0 +1,281 @@
+@import url();
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background:#2a2a47;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+#container
+{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-auto-flow: dense;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:0 400px 1fr ;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#container div{
+    padding: 10px;
+    /*border: 1px solid black;*/
+}
+#button{
+    color: rgb(243, 236, 236);
+}
+#button:hover{
+    color:black;
+}
+.navbar
+{
+    display: flex;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    
+    background-image: linear-gradient(to left,#312323,#ca741e,#eee8e8);
+    font-size: 1.2rem;
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    border-bottom: 2px solid #ebe1e1;
+}
+.navbar-menu
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    z-index: 1;
+    max-width: 1300px;
+
+}
+.access
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5cm;
+    color: white;
+}
+
+li
+{
+    margin: 5px;
+    list-style: none;
+}
+.space1
+{
+    grid-column-start: 1;
+    grid-column-end:4;
+    background-image: linear-gradient(to left,#5f4646,#df821e,white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#space2
+{
+    grid-column-start: 1;
+    grid-column-end:4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    animation: slide 10s infinite; 
+}
+@keyframes slide{
+    25%{
+        background-image: url(./food.PNG);
+    }
+    50%{
+        background-image: url(./scenary.jpg);
+    }
+    75%{
+        background-image: url(./food.PNG);
+    }
+    100%{
+        background-image: url(./gulu.jpg);
+    }
+}
+h2
+{
+    top: 28%;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    z-index: 4;
+    font-size: 50px;
+    font-family: Georgia;
+ color: orange;
+}
+a{
+    text-decoration: none;
+    
+}
+h2:hover {
+    animation: move-down 2.5s infinite;
+    padding:1em;
+
+}
+
+@keyframes move-down{
+    0%
+    {
+        top: 25%;
+    }
+    50%
+    {
+        top: 50%;
+    }
+    100%
+    {
+        top: 100%;
+    }
+}
+.b-image{
+    background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  opacity: 10;
+}
+
+.space3
+{
+    padding: 50px;
+}
+
+h1
+{
+    display: flex;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+   
+
+}
+.good
+{
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(#63295e, #df6320);
+    background: -webkit-linear-gradient(to right,);
+    padding: 3px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    
+}
+.image
+{
+    display: flex;
+    width: 200px;
+    height: 120px;
+    padding-left: 10px;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border-style: none;
+
+}
+h4{
+    top: 28%;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    z-index: 4;
+    font-size: 20px;
+    font-family: Georgia;
+ color: white;
+}
+
+.good:hover{
+    transform: scale(1.3);
+}
+h3{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: cursive;
+    background-color: yellowgreen;
+    background-image: linear-gradient(to right,#c4ebc4 50%,#e1d5cf 50%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+
+    margin: 0;
+    padding:0;
+}
+.image3{
+   
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 386px;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.image3:hover{
+    transform: scale(1.065);
+}
+.header1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 40px;
+}
+ol{
+    color:black;
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    
+}
+.culture{
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 386px;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    animation: slide 15s infinite;
+}
+@keyframes slide{
+    25%{
+        background-image: url(./food1.jpg);
+    }
+    50%{
+        background-image: url(./Golden-peace-hotel.jpg);
+    }
+    100%{
+        background-image: url(./gulu\ city.jpg);
+    }
+    
+
+}
